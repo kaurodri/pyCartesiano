@@ -9,7 +9,7 @@ if __name__ == "__main__":
     canvas.pack()
 
     plano = Plano(canvas)
-    circulo.desenhar(canvas, -2, 2, 1)  # Desenha um círculo com centro em (-2, 3) e raio 2
-    quadrado.desenhar(canvas, 1, 1, 2)  # Desenha um quadrado com vértice superior esquerdo em (1, 1) e lado de comprimento 2
-    triangulo.desenhar(canvas, -1, -1, -4, -2, -2, -4)  # Desenha um triângulo com vértices em (1, 1), (4, 2) e (2, 4)
+    circulo.desenhar(canvas, -2, 2, 1)  #círculo com centro em (x, y) e raio r
+    quadrado.desenhar(canvas, 2, 2, 2)  #quadrado com centro em (x, y) e altura h
+    triangulo.desenhar(canvas, -2, -1, -3, -3, -1, -3)  #triângulo com vértices em (x1, y1), (x2, y2,) e (x3, y3)
     root.mainloop()
