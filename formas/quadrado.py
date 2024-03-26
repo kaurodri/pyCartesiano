@@ -1,6 +1,6 @@
 import tkinter as tk
 
-class Quadrado:
+class desenhar:
     def __init__(self, canvas, x, y, lado):
         self.canvas = canvas
         escala = 60  # Escala para desenhar os pontos

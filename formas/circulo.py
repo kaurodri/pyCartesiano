@@ -1,6 +1,6 @@
 import tkinter as tk
 
-class Circulo:
+class desenhar:
     def __init__(self, canvas, x, y, raio):
         self.canvas = canvas
         escala = 60  # Escala para desenhar os pontos

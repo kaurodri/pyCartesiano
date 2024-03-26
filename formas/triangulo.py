@@ -1,6 +1,6 @@
 import tkinter as tk
 
-class Triangulo:
+class desenhar:
     def __init__(self, canvas, x1, y1, x2, y2, x3, y3):
         self.canvas = canvas
         escala = 60  # Escala para desenhar os pontos
