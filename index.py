@@ -1,34 +1,17 @@
-import tkinter as tk
+from plano import *
+from circulo import *
+from quadrado import *
+from triangulo import *
 
-# Função para desenhar o plano cartesiano
-def desenhar_plano_cartesiano(canvas):
-    largura = 600  # Largura do canvas
-    altura = 600   # Altura do canvas
-    escala = 60    # Escala para desenhar os pontos
-    
-    # Desenha as linhas horizontais
-    for i in range(-5, 6):
-        canvas.create_line(0, altura/2 - i*escala, largura, altura/2 - i*escala, fill="gray")
-    
-    # Desenha as linhas verticais
-    for i in range(-5, 6):
-        canvas.create_line(largura/2 + i*escala, 0, largura/2 + i*escala, altura, fill="gray")
-    
-    # Desenha os eixos x e y
-    canvas.create_line(0, altura/2, largura, altura/2, fill="black", width=2)
-    canvas.create_line(largura/2, 0, largura/2, altura, fill="black", width=2)
-
-# Função principal
-def main():
+if __name__ == "__main__":
     root = tk.Tk()
     root.title("Plano Cartesiano")
 
     canvas = tk.Canvas(root, width=600, height=600, bg="white")
     canvas.pack()
 
-    desenhar_plano_cartesiano(canvas)
-
+    plano = Plano(canvas)
+    circulo = Circulo(canvas, -2, 2, 1)  # Desenha um círculo com centro em (-2, 3) e raio 2
+    quadrado = Quadrado(canvas, 1, 1, 2)  # Desenha um quadrado com vértice superior esquerdo em (1, 1) e lado de comprimento 2
+    triangulo = Triangulo(canvas, -1, -1, -4, -2, -2, -4)  # Desenha um triângulo com vértices em (1, 1), (4, 2) e (2, 4)
     root.mainloop()
-
-if __name__ == "__main__":
-    main()
