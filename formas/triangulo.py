@@ -1,11 +1,8 @@
 import tkinter as tk
 
 class desenhar:
-    def __init__(self, canvas, x1, y1, x2, y2, x3, y3):
+    def __init__(self, canvas, largura, altura, escala, x1, y1, x2, y2, x3, y3):
         self.canvas = canvas
-        escala = 60  # Escala para desenhar os pontos
-        largura = 600  # Largura do canvas
-        altura = 600   # Altura do canvas
 
         # Converter as coordenadas cartesianas para as coordenadas do canvas
         x1_canvas = largura / 2 + x1 * escala
