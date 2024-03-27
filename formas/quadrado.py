@@ -1,6 +1,6 @@
 import tkinter as tk
 
-class desenhar:
+class Desenhar:
     def __init__(self, canvas, largura, altura, escala, x, y, lado):
         self.canvas = canvas
 
