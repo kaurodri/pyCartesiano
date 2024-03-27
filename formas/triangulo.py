@@ -1,8 +1,11 @@
 import tkinter as tk
 
 class Desenhar:
-    def __init__(self, canvas, largura, altura, escala, x1, y1, x2, y2, x3, y3):
+    def __init__(self, canvas, conf, x1, y1, x2, y2, x3, y3):
         self.canvas = canvas
+        largura = conf[0]
+        altura = conf[1]
+        escala = conf[2]
 
         # Converter as coordenadas cartesianas para as coordenadas do canvas
         x1_canvas = largura / 2 + x1 * escala

@@ -2,9 +2,12 @@ import tkinter as tk
 
 # Função para desenhar o plano cartesiano
 class Plano:
-    def __init__(self, canvas, largura, altura, escala):
+    def __init__(self, canvas, conf):
         self.canvas = canvas
-    
+        largura = conf[0]
+        altura = conf[1]
+        escala = conf[2]
+        
         # Desenha as linhas horizontais
         for i in range(-20, 21):
             self.canvas.create_line(0, altura/2 - i*escala, largura, altura/2 - i*escala, fill="gray")
